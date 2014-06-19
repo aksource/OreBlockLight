@@ -7,7 +7,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameData;
 
-@Mod(modid="OreBlockLight", name="OreBlockLight", version="1.7srg-1",dependencies="required-after:FML", useMetadata = true)
+@Mod(modid="OreBlockLight", name="OreBlockLight", version="@VERSION@",dependencies="required-after:FML", useMetadata = true)
 public class OreBlockLight
 {
 	@Mod.Instance("OreBlockLight")
