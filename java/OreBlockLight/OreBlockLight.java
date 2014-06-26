@@ -37,9 +37,9 @@ public class OreBlockLight
 	public void setLight(String[] IDs, float Lv)
 	{
 		Block block;
-		for(int i = 0;i < IDs.length;i++){
-			if(!IDs[i].isEmpty() && GameData.blockRegistry.getObject(IDs[i]) != null){
-				block = GameData.blockRegistry.getObject(IDs[i]);
+		for(String string : IDs){
+			if(!string.isEmpty() && GameData.getBlockRegistry().getObject(string) != null){
+				block = GameData.getBlockRegistry().getObject(string);
 				block.setLightLevel(Lv);
 			}
 		}
