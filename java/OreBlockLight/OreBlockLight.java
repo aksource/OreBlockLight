@@ -7,11 +7,18 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameData;
 
-@Mod(modid="OreBlockLight", name="OreBlockLight", version="@VERSION@",dependencies="required-after:FML", useMetadata = true)
-public class OreBlockLight
-{
-	@Mod.Instance("OreBlockLight")
-	public static OreBlockLight instance;
+@Mod(modid = OreBlockLight.MOD_ID,
+		name = OreBlockLight.MOD_NAME,
+		version = OreBlockLight.MOD_VERSION,
+		dependencies = OreBlockLight.MOD_DEPENDENCIES,
+		useMetadata = true,
+		acceptedMinecraftVersions = OreBlockLight.MOD_MC_VERSION)
+public class OreBlockLight {
+	public static final String MOD_ID = "OreBlockLight";
+	public static final String MOD_NAME = "OreBlockLight";
+	public static final String MOD_VERSION = "@VERSION@";
+	public static final String MOD_DEPENDENCIES = "required-after:Forge@[11.14.0.1237,)";
+	public static final String MOD_MC_VERSION = "[1.8,1.8.9]";
 	
 	public static String[] LightBlockIDs;
 	public static String[] Light7BlockIDs;
