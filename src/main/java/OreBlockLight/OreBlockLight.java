@@ -1,6 +1,7 @@
 package OreBlockLight;
 
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
@@ -14,11 +15,11 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
         useMetadata = true,
         acceptedMinecraftVersions = OreBlockLight.MOD_MC_VERSION)
 public class OreBlockLight {
-    public static final String MOD_ID = "OreBlockLight";
+    public static final String MOD_ID = "oreblocklight";
     public static final String MOD_NAME = "OreBlockLight";
     public static final String MOD_VERSION = "@VERSION@";
-    public static final String MOD_DEPENDENCIES = "required-after:Forge@[12.17.0,)";
-    public static final String MOD_MC_VERSION = "[1.9,1.10.99]";
+    public static final String MOD_DEPENDENCIES = "required-after:forge@[12.17.0,)";
+    public static final String MOD_MC_VERSION = "[1.11,1.99.99]";
 
     private static String[] LightBlockIDs;
     private static String[] Light7BlockIDs;
@@ -41,10 +42,10 @@ public class OreBlockLight {
         setLight(Light0BlockIDs, 0.0F);
     }
 
-    private void setLight(String[] IDs, float Lv) {
+    private void setLight(String[] ids, float Lv) {
         Block block;
-        for (String string : IDs) {
-            if (!string.isEmpty() && Block.REGISTRY.getObject(new ResourceLocation(string)) != null) {
+        for (String string : ids) {
+            if (!string.isEmpty() && Block.REGISTRY.getObject(new ResourceLocation(string)) != Blocks.AIR) {
                 block = Block.REGISTRY.getObject(new ResourceLocation(string));
                 block.setLightLevel(Lv);
             }
