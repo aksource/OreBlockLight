@@ -1,6 +1,7 @@
 package OreBlockLight;
 
 import net.minecraft.block.Block;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -45,8 +46,9 @@ public class OreBlockLight {
 	{
 		Block block;
 		for(String string : IDs){
-			if(!string.isEmpty() && GameData.getBlockRegistry().getObject(string) != null){
-				block = GameData.getBlockRegistry().getObject(string);
+			ResourceLocation res = new ResourceLocation(string);
+			if(!string.isEmpty() && GameData.getBlockRegistry().getObject(res) != null){
+				block = GameData.getBlockRegistry().getObject(res);
 				block.setLightLevel(Lv);
 			}
 		}
