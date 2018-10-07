@@ -19,7 +19,7 @@ public class OreBlockLight {
     public static final String MOD_NAME = "OreBlockLight";
     public static final String MOD_VERSION = "@VERSION@";
     public static final String MOD_DEPENDENCIES = "required-after:forge@[12.17.0,)";
-    public static final String MOD_MC_VERSION = "[1.11,1.99.99]";
+    public static final String MOD_MC_VERSION = "[1.12,1.99.99]";
 
     private static String[] LightBlockIDs;
     private static String[] Light7BlockIDs;
